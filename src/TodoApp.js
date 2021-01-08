@@ -9,7 +9,9 @@ import Toolbar from '@material-ui/core/Toolbar'
 import Grid from '@material-ui/core/Grid'
 
 function TodoApp() {
-  const initialTodos = JSON.parse(window.localStorage.getItem('todos') || '[]')
+  const initialTodos = [
+    { id: 1, task: 'Learn to throw 500ft', completed: false },
+  ]
 
   const { todos, addTodo, removeTodo, toggleTodo, editTodo } = useTodoState(
     initialTodos
